@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cedrela Tecnologia Ambiental - Automação, dados e eficiência operacional para processos ambientais e inventários florestais no SISARV." />
-  <title>Cedrela Tecnologia Ambiental</title>
+  <meta
+    name="description"
+    content="Especialistas em cadastro, preenchimento e lançamento de inventários no SISARV para consultorias ambientais, engenheiros florestais e empresas que atuam em processos ambientais."
+  />
+  <title>Cadastro e Preenchimento SISARV | Cedrela Tecnologia Ambiental</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,202 +15,303 @@
 
   <header class="site-header" id="topo">
     <div class="container header-inner">
-      <div class="brand">
+      <a class="brand" href="#inicio" aria-label="Ir para o início">
         <div class="logo-placeholder" aria-label="Espaço reservado para logotipo">LOGO</div>
-        <div>
+        <div class="brand-copy">
           <p class="brand-name">Cedrela Tecnologia Ambiental</p>
+          <p class="brand-tag">Cadastro, preenchimento e lançamento no SISARV</p>
         </div>
-      </div>
+      </a>
 
-      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
-        ☰
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        Menu
       </button>
 
       <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
         <a href="#inicio">Início</a>
-        <a href="#solucoes">Soluções</a>
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#beneficios">Benefícios</a>
-        <a href="#planos">Planos</a>
+        <a href="#empresa">Sobre</a>
+        <a href="#solucoes">Serviços</a>
+        <a href="#metodologia">Como funciona</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#faq">FAQ</a>
         <a href="#contato">Contato</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section id="inicio" class="hero sect;on">
-      <div class="container hero-grid">
-        <div>
-          <span class="kicker">Consultoria ambiental + tecnologia + automação</span>
-          <h1>Tecnologia aplicada à gestão ambiental</h1>
+    <section id="inicio" class="hero section">
+      <div class="hero-backdrop" aria-hidden="true">
+        <div class="hero-shape hero-shape-one"></div>
+        <div class="hero-shape hero-shape-two"></div>
+        <div class="hero-gridline"></div>
+      </div>
+
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <span class="eyebrow">Serviço especializado em SISARV</span>
+          <h1>Especialistas em Cadastro e Lançamento de Inventários no SISARV</h1>
           <p class="lead">
-            Automação, padronização e eficiência para processos ambientais, inventários florestais e
-            preenchimento de sistemas como o SISARV.
+            Terceirize o preenchimento, cadastro e lançamento de inventários no SISARV com uma equipe
+            especializada em meio ambiente, dados e processos ambientais.
           </p>
+          <p class="technical-note">
+            A Cedrela Tecnologia Ambiental apoia consultorias ambientais, engenheiros florestais e empresas que
+            necessitam cadastrar inventários arbóreos no SISARV com agilidade, organização e controle técnico.
+          </p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#solucoes">Conheça a solução</a>
-            <a class="btn btn-outline" href="#contato">Solicitar proposta</a>
+            <a class="btn btn-primary" href="https://wa.me/5521974403953?text=Olá,%20vim%20pelo%20site%20da%20Cedrela%20e%20gostaria%20de%20mais%20informações%20sobre%20o%20serviço%20de%20preenchimento%20SISARV." target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+            <a class="btn btn-secondary" href="https://wa.me/5521974403953?text=Olá,%20vim%20pelo%20site%20da%20Cedrela%20e%20gostaria%20de%20mais%20informações%20sobre%20o%20serviço%20de%20preenchimento%20SISARV." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
           </div>
-          <p class="note">
-            Desempenho estimado conforme o layout de entrada e o modelo de operação definido em comum acordo.
-            A performance pode variar conforme estabilidade do sistema e qualidade dos dados recebidos.
-          </p>
         </div>
 
-        <aside class="highlight-card" aria-label="Destaque de desempenho">
-          <p class="highlight-label">Capacidade operacional estimada</p>
-          <p class="highlight-value">Até 600 árvores/hora</p>
-          <p class="highlight-context">no preenchimento automatizado do SISARV</p>
+        <aside class="hero-panel" aria-label="Destaque institucional">
+          <p class="panel-label">Aviso importante</p>
+          <p class="panel-text">Serviço especializado em cadastro e lançamento de informações no SISARV</p>
+          <div class="panel-divider"></div>
+          <p class="panel-note">
+            Não realizamos inventário arbóreo de campo nesta modalidade de atendimento.
+          </p>
         </aside>
       </div>
     </section>
 
-    <section id="sobre" class="section section-alt">
-      <div class="container">
-        <h2>Sobre a Cedrela</h2>
-        <p>
-          A Cedrela Tecnologia Ambiental nasce para aproximar a rotina da consultoria ambiental das ferramentas de
-          automação, dados e tecnologia. Nosso foco é reduzir tarefas manuais, aumentar a padronização dos processos
-          e apoiar empresas ambientais na execução de demandas operacionais com mais eficiência, rastreabilidade e
-          controle.
-        </p>
+    <section id="empresa" class="section section-soft">
+      <div class="container section-heading">
+        <span class="section-kicker">Sobre a Cedrela</span>
+        <h2>Suporte especializado para cadastro, preenchimento e lançamento de inventários no SISARV</h2>
+      </div>
+
+      <div class="container content-grid">
+        <div class="content-card content-card-wide">
+          <p>
+            A Cedrela Tecnologia Ambiental é especializada em soluções ambientais, organização de dados técnicos e
+            suporte operacional para processos ambientais.
+          </p>
+          <p>
+            Nossa atuação é voltada para consultorias ambientais, profissionais técnicos e empresas que necessitam de
+            apoio especializado no cadastro, preenchimento e lançamento de inventários no SISARV, garantindo maior
+            eficiência, padronização e rastreabilidade das informações.
+          </p>
+        </div>
+
+        <div class="content-card content-card-accent">
+          <h3>Foco do atendimento</h3>
+          <ul class="feature-list">
+            <li>Cadastro de inventários no SISARV</li>
+            <li>Preenchimento de dados técnicos</li>
+            <li>Lançamento de registros ambientais</li>
+            <li>Organização e controle das informações</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section id="solucoes" class="section">
-      <div class="container">
-        <h2>Soluções</h2>
-        <div class="cards three-col">
-          <article class="card">
-            <h3>🌿 Automação SISARV</h3>
-            <p>Preenchimento automatizado de inventários florestais no SISARV a partir de planilhas estruturadas.</p>
-          </article>
-          <article class="card">
-            <h3>📊 Padronização de dados ambientais</h3>
-            <p>Organização de planilhas, validação de campos e compatibilização de layouts para processos ambientais.</p>
-          </article>
-          <article class="card">
-            <h3>⚙️ Apoio tecnológico para consultorias ambientais</h3>
-            <p>Desenvolvimento de soluções sob medida para reduzir retrabalho e acelerar rotinas técnicas.</p>
-          </article>
-        </div>
+      <div class="container section-heading">
+        <span class="section-kicker">Serviços especializados em SISARV</span>
+        <h2>Atuação direcionada ao cadastro e lançamento de inventários ambientais</h2>
       </div>
-    </section>
 
-    <section id="automacao-sisarv" class="section section-alt">
-      <div class="container">
-        <h2>Automação para SISARV</h2>
-        <p>
-          A solução realiza o lançamento sistemático dos indivíduos arbóreos no SISARV com base em uma planilha de
-          inventário previamente definida. O processo reduz erros de digitação, melhora a repetibilidade e permite
-          maior controle sobre grandes volumes de dados.
-        </p>
-
-        <div class="flow-grid" role="list" aria-label="Fluxo operacional">
-          <div class="flow-item" role="listitem">
-            <h3>Entrada</h3>
-            <p>Planilha de inventário em layout final.</p>
-          </div>
-          <div class="flow-item" role="listitem">
-            <h3>Processamento</h3>
-            <p>Automação configurada conforme layout e regras acordadas.</p>
-          </div>
-          <div class="flow-item" role="listitem">
-            <h3>Saída</h3>
-            <p>Registros lançados no SISARV com rastreabilidade operacional.</p>
-          </div>
-          <div class="flow-item" role="listitem">
-            <h3>Relatório</h3>
-            <p>Possibilidade de consolidação com quantidade processada e pendências.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="como-funciona" class="section">
-      <div class="container">
-        <h2>Como funciona</h2>
-        <ol class="timeline">
-          <li>A empresa parceira envia a planilha de inventário em layout final.</li>
-          <li>A Cedrela analisa o modelo e ajusta a automação.</li>
-          <li>O código/configuração é preparado em até 24 horas.</li>
-          <li>A execução é realizada conforme o modelo operacional acordado.</li>
-          <li>Ao final, podem ser consolidados os registros processados e eventuais inconsistências.</li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="beneficios" class="section section-alt">
-      <div class="container">
-        <h2>Benefícios</h2>
-        <div class="cards three-col">
-          <article class="card"><p>Redução do tempo de lançamento</p></article>
-          <article class="card"><p>Menor risco de erro de digitação</p></article>
-          <article class="card"><p>Padronização do preenchimento</p></article>
-          <article class="card"><p>Repetibilidade operacional</p></article>
-          <article class="card"><p>Escalabilidade para grandes volumes</p></article>
-          <article class="card"><p>Apoio técnico especializado</p></article>
-          <article class="card"><p>Governança e validação conforme regras acordadas</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="planos" class="section">
-      <div class="container">
-        <h2>Modelo comercial</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Quantidade</th>
-                <th>Valor por árvore</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>1 a 300 árvores</td><td>R$ 2,00/un</td></tr>
-              <tr><td>301 a 800 árvores</td><td>R$ 1,70/un</td></tr>
-              <tr><td>801 a 1500 árvores</td><td>R$ 1,40/un</td></tr>
-              <tr><td>1501 a 2500 árvores</td><td>R$ 1,20/un</td></tr>
-              <tr><td>Acima de 2500 árvores</td><td>R$ 1,00/un</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="note">
-          Taxa mínima de R$ 100,00 por planilha/layout, referente à compatibilização do modelo com a automação.
-        </p>
-      </div>
-    </section>
-
-    <section id="para-quem" class="section section-alt">
-      <div class="container">
-        <h2>Para quem é</h2>
-        <div class="cards two-col">
-          <article class="card"><p>Consultorias ambientais</p></article>
-          <article class="card"><p>Empresas de inventário florestal</p></article>
-          <article class="card"><p>Profissionais que atuam com SISARV</p></article>
-          <article class="card"><p>Equipes que precisam lançar grandes volumes de árvores</p></article>
-          <article class="card"><p>Empresas que buscam reduzir retrabalho em processos ambientais</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contato" class="section">
-      <div class="container contact-grid">
-        <div>
-          <h2>Quer automatizar o preenchimento dos seus inventários?</h2>
+      <div class="container cards cards-three">
+        <article class="card">
+          <h3>Cadastro de inventários</h3>
           <p>
-            Envie sua demanda e retornaremos com uma proposta técnica-comercial conforme o volume, layout e modelo
-            de operação definido em comum acordo.
+            Inserção completa dos dados de inventário no SISARV conforme informações fornecidas pelo cliente.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Lançamento de dados de árvores</h3>
+          <p>
+            Cadastro individual dos indivíduos arbóreos e atributos exigidos pela plataforma.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Organização e conferência de planilhas</h3>
+          <p>
+            Validação das informações antes do lançamento para reduzir inconsistências.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Apoio técnico para consultorias</h3>
+          <p>
+            Suporte operacional para equipes que precisam cumprir prazos de licenciamento e condicionantes ambientais.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sisarv" class="section section-soft">
+      <div class="container split-layout">
+        <div>
+          <div class="section-heading left">
+            <span class="section-kicker">Serviço para SISARV</span>
+            <h2>Cadastro, preenchimento e lançamento de dados com organização e controle técnico</h2>
+          </div>
+
+          <p>
+            A Cedrela posiciona esse serviço como suporte especializado para empresas e profissionais que já possuem os
+            dados do inventário e precisam realizar o cadastro, preenchimento e lançamento das informações no SISARV.
           </p>
 
+          <p class="technical-note">
+            Esta modalidade não contempla inventário arbóreo de campo. O atendimento é focado no tratamento e no
+            lançamento de dados já fornecidos pelo cliente.
+          </p>
+        </div>
+
+        <div class="content-card content-card-accent">
+          <h3>Escopo do serviço</h3>
+          <ul class="feature-list feature-list-tight">
+            <li>Recebimento de planilhas, relatórios ou bases estruturadas</li>
+            <li>Conferência técnica das informações antes do cadastro</li>
+            <li>Preenchimento e lançamento dos dados na plataforma</li>
+            <li>Revisão dos registros para maior consistência</li>
+            <li>Rastreabilidade das informações processadas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="metodologia" class="section">
+      <div class="container section-heading">
+        <span class="section-kicker">Como funciona</span>
+        <h2>Fluxo de atendimento para cadastro e lançamento no SISARV</h2>
+      </div>
+
+      <div class="container timeline">
+        <article class="timeline-item">
+          <span class="timeline-step">Etapa 1</span>
+          <h3>Envio dos dados</h3>
+          <p>
+            O cliente encaminha planilhas, relatórios ou bases estruturadas.
+          </p>
+        </article>
+
+        <article class="timeline-item">
+          <span class="timeline-step">Etapa 2</span>
+          <h3>Conferência técnica</h3>
+          <p>
+            A Cedrela verifica a organização e consistência das informações.
+          </p>
+        </article>
+
+        <article class="timeline-item">
+          <span class="timeline-step">Etapa 3</span>
+          <h3>Cadastro no SISARV</h3>
+          <p>
+            Realizamos o preenchimento e lançamento dos dados na plataforma.
+          </p>
+        </article>
+
+        <article class="timeline-item">
+          <span class="timeline-step">Etapa 4</span>
+          <h3>Revisão e controle</h3>
+          <p>Os registros são revisados para garantir consistência e rastreabilidade.</p>
+        </article>
+
+        <article class="timeline-item">
+          <span class="timeline-step">Etapa 5</span>
+          <h3>Entrega</h3>
+          <p>
+            O cliente recebe o serviço concluído conforme escopo contratado.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="diferenciais" class="section section-soft">
+      <div class="container section-heading">
+        <span class="section-kicker">Diferenciais técnicos</span>
+        <h2>Diferenciais para demandas de cadastro SISARV, preenchimento SISARV e lançamento SISARV</h2>
+      </div>
+
+      <div class="container cards cards-three">
+        <article class="card card-compact"><p>Especialização em SISARV</p></article>
+        <article class="card card-compact"><p>Conhecimento técnico ambiental</p></article>
+        <article class="card card-compact"><p>Redução de tempo operacional</p></article>
+        <article class="card card-compact"><p>Processo padronizado</p></article>
+        <article class="card card-compact"><p>Organização e rastreabilidade das informações</p></article>
+        <article class="card card-compact"><p>Atendimento especializado para consultorias</p></article>
+        <article class="card card-compact"><p>Apoio técnico durante o processo</p></article>
+        <article class="card card-compact"><p>Atendimento em todo o Estado do Rio de Janeiro</p></article>
+      </div>
+    </section>
+
+    <section id="indicacao" class="section">
+      <div class="container section-heading">
+        <span class="section-kicker">Para quem é o serviço</span>
+        <h2>Atendimento voltado a profissionais e empresas com demanda de lançamento no SISARV</h2>
+      </div>
+
+      <div class="container cards cards-two">
+        <article class="card"><h3>Consultorias ambientais</h3></article>
+        <article class="card"><h3>Engenheiros florestais</h3></article>
+        <article class="card"><h3>Engenheiros ambientais</h3></article>
+        <article class="card"><h3>Empresas de licenciamento</h3></article>
+        <article class="card"><h3>Escritórios técnicos</h3></article>
+        <article class="card"><h3>Empresas contratadas para projetos ambientais</h3></article>
+        <article class="card"><h3>Equipes responsáveis por inventários arbóreos</h3></article>
+        <article class="card"><h3>Empresas que atuam em processos ambientais no Município do Rio de Janeiro</h3></article>
+      </div>
+    </section>
+
+    <section id="faq" class="section section-soft">
+      <div class="container section-heading">
+        <span class="section-kicker">FAQ</span>
+        <h2>Perguntas frequentes sobre o serviço de preenchimento SISARV</h2>
+      </div>
+
+      <div class="container cards cards-two">
+        <article class="card">
+          <h3>A Cedrela realiza inventário arbóreo de campo?</h3>
+          <p>Não nesta modalidade. O serviço é focado no cadastro, preenchimento e lançamento de dados já fornecidos pelo cliente.</p>
+        </article>
+        <article class="card">
+          <h3>O serviço é apenas para empresas do Rio de Janeiro?</h3>
+          <p>Não. Atendemos empresas e consultorias de qualquer município que possuam demandas relacionadas ao SISARV do Município do Rio de Janeiro.</p>
+        </article>
+        <article class="card">
+          <h3>Como envio os dados?</h3>
+          <p>Os dados podem ser enviados por planilhas, relatórios ou bases estruturadas previamente acordadas.</p>
+        </article>
+        <article class="card">
+          <h3>Posso contratar apenas para um projeto específico?</h3>
+          <p>Sim. O serviço pode ser contratado para demandas pontuais ou recorrentes.</p>
+        </article>
+        <article class="card">
+          <h3>Como solicitar orçamento?</h3>
+          <p>Basta entrar em contato pelo WhatsApp e informar o volume estimado de registros e a estrutura dos dados.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato" class="section section-contact">
+      <div class="container contact-layout">
+        <div class="contact-copy">
+          <span class="section-kicker">Contato</span>
+          <h2>Precisa cadastrar um inventário no SISARV?</h2>
+          <p>
+            Solicite um orçamento e conte com uma equipe especializada em cadastro e lançamento de inventários ambientais.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/5521974403953?text=Olá,%20vim%20pelo%20site%20da%20Cedrela%20e%20gostaria%20de%20mais%20informações%20sobre%20o%20serviço%20de%20preenchimento%20SISARV." target="_blank" rel="noopener noreferrer">Solicitar Orçamento via WhatsApp</a>
+          </div>
+
           <ul class="contact-list">
-            <li><strong>E-mail:</strong> inserir_email@dominio.com</li>
-            <li><strong>WhatsApp:</strong> inserir número futuramente</li>
-            <li><strong>Localização:</strong> Rio de Janeiro/RJ</li>
+            <li><strong>Cedrela Tecnologia Ambiental</strong><span>Cadastro e lançamento de inventários no SISARV</span></li>
+            <li><strong>E-mail institucional</strong><span>cedrelatecambiental@gmail.com</span></li>
+            <li><strong>WhatsApp</strong><span>+55 21 97440-3953</span></li>
+            <li><strong>Cidade/UF</strong><span>Rio de Janeiro/RJ</span></li>
           </ul>
         </div>
 
-        <form class="contact-form" action="mailto:inserir_email@dominio.com" method="post" enctype="text/plain">
+        <form class="contact-form" action="mailto:cedrelatecambiental@gmail.com" method="post" enctype="text/plain">
           <label for="nome">Nome</label>
           <input id="nome" name="nome" type="text" required />
 
@@ -217,7 +321,7 @@
           <label for="email">E-mail</label>
           <input id="email" name="email" type="email" required />
 
-          <label for="telefone">Telefone/WhatsApp</label>
+          <label for="telefone">Telefone</label>
           <input id="telefone" name="telefone" type="tel" />
 
           <label for="mensagem">Mensagem</label>
@@ -231,11 +335,11 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>Cedrela Tecnologia Ambiental © 2026. Tecnologia, dados e automação para processos ambientais.</p>
+      <p>Cedrela Tecnologia Ambiental © 2026. Cadastro, preenchimento e lançamento de inventários no SISARV.</p>
     </div>
   </footer>
 
-  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">↑</button>
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
 
   <script src="script.js"></script>
 </body>
