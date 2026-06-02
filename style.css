@@ -249,13 +249,18 @@ svg {
 .hero-layout {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-  gap: 44px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 32px 40px;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .hero-content {
-  max-width: 760px;
+  width: 100%;
+  max-width: none;
+  text-align: left;
 }
 
 .eyebrow,
@@ -317,8 +322,15 @@ p {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 14px;
-  margin-top: 34px;
+  margin-top: 0;
+}
+
+.hero-actions-bottom {
+  grid-column: 1 / -1;
+  margin-top: 6px;
+  width: 100%;
 }
 
 .btn {
@@ -386,7 +398,9 @@ p {
   gap: 12px;
   list-style: none;
   padding: 0;
-  margin: 34px 0 0;
+  margin: 2px 0 0;
+  grid-column: 1 / -1;
+  width: 100%;
 }
 
 .hero-highlights li {
@@ -414,6 +428,7 @@ p {
   padding: 30px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(247, 248, 247, 0.95) 100%);
   box-shadow: var(--shadow-md);
+  width: 100%;
 }
 
 .panel-text {
@@ -947,12 +962,24 @@ textarea:focus {
     padding-bottom: 88px;
   }
 
-  h1 {
-    max-width: none;
+  .hero-content,
+  .hero-panel {
+    text-align: center;
+  }
+
+  .technical-note {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-panel {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 920px) {
+  h1 {
+    max-width: none;
   }
 }
 
