@@ -585,6 +585,14 @@ p {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(247, 248, 247, 0.98) 100%);
 }
 
+.premium-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.premium-card h3 {
+  margin-bottom: 6px;
+}
+
 .premium-icon {
   display: inline-flex;
   align-items: center;
@@ -618,7 +626,7 @@ p {
 .timeline {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
