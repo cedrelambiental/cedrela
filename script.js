@@ -1,49 +1,31 @@
+// Menu mobile
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('#main-nav');
-const navLinks = document.querySelectorAll('.main-nav a');
-const sections = document.querySelectorAll('main section[id]');
-const backToTop = document.getElementById('backToTop');
-
-const closeMenu = () => {
-  if (!mainNav || !menuToggle) {
-    return;
-  }
-
-  mainNav.classList.remove('open');
-  menuToggle.setAttribute('aria-expanded', 'false');
-  document.body.classList.remove('menu-open');
-};
 
 if (menuToggle && mainNav) {
   menuToggle.addEventListener('click', () => {
     const isOpen = mainNav.classList.toggle('open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
-    document.body.classList.toggle('menu-open', isOpen);
   });
 
-  navLinks.forEach((link) => {
-    link.addEventListener('click', closeMenu);
-  });
-
-  window.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      closeMenu();
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 920) {
-      closeMenu();
-    }
+  mainNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
   });
 }
+
+// Destacar link ativo no menu conforme seção visível
+const sections = document.querySelectorAll('main section[id]');
+const navLinks = document.querySelectorAll('.main-nav a');
 
 const setActiveLink = () => {
   let currentId = 'inicio';
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 140;
-    if (window.scrollY >= sectionTop) {
+    const top = section.offsetTop - 120;
+    if (window.scrollY >= top) {
       currentId = section.id;
     }
   });
@@ -54,16 +36,19 @@ const setActiveLink = () => {
   });
 };
 
-window.addEventListener('load', setActiveLink);
 window.addEventListener('scroll', setActiveLink);
+window.addEventListener('load', setActiveLink);
+
+// Botão voltar ao topo
+const backToTop = document.getElementById('backToTop');
 
 if (backToTop) {
   const toggleBackToTop = () => {
-    backToTop.classList.toggle('show', window.scrollY > 420);
+    backToTop.classList.toggle('show', window.scrollY > 450);
   };
 
-  window.addEventListener('load', toggleBackToTop);
   window.addEventListener('scroll', toggleBackToTop);
+  window.addEventListener('load', toggleBackToTop);
 
   backToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

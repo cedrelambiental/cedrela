@@ -1,8 +1,8 @@
 # Cedrela Tecnologia Ambiental - Site institucional estático
 
-Site institucional de página única, desenvolvido com HTML5, CSS3 e JavaScript puro, preparado para publicação no GitHub Pages.
+Projeto de site institucional de página única, desenvolvido com HTML5, CSS3 e JavaScript puro, pronto para publicação no GitHub Pages.
 
-## Estrutura do projeto
+## Estrutura dos arquivos
 
 - `index.html`
 - `style.css`
@@ -11,14 +11,14 @@ Site institucional de página única, desenvolvido com HTML5, CSS3 e JavaScript 
 
 ## 1) Como subir os arquivos no GitHub
 
-1. Crie um repositório no GitHub, por exemplo: `cedrela-site`.
-2. Coloque os arquivos do projeto na mesma pasta local.
-3. Envie o conteúdo para o repositório:
+1. Crie um novo repositório no GitHub (exemplo: `cedrela-site`).
+2. No seu computador, coloque os quatro arquivos na mesma pasta.
+3. Inicialize o Git e envie o projeto:
 
 ```bash
 git init
 git add .
-git commit -m "Adicionar site institucional da Cedrela"
+git commit -m "Adicionar site institucional estático da Cedrela"
 git branch -M main
 git remote add origin https://github.com/SEU-USUARIO/cedrela-site.git
 git push -u origin main
@@ -27,48 +27,39 @@ git push -u origin main
 ## 2) Como ativar o GitHub Pages
 
 1. Acesse o repositório no GitHub.
-2. Abra **Settings** > **Pages**.
+2. Vá em **Settings** > **Pages**.
 3. Em **Build and deployment**:
-   - selecione **Deploy from a branch**
-   - escolha a branch `main`
-   - escolha a pasta `/ (root)`
+   - **Source**: `Deploy from a branch`
+   - **Branch**: `main` e pasta `/ (root)`
 4. Clique em **Save**.
-5. Aguarde a publicação e copie a URL exibida pelo GitHub Pages.
+5. Aguarde alguns minutos. O GitHub exibirá a URL pública do site.
 
 ## 3) Como alterar textos, cores e informações de contato
 
-### Textos e seções
-- Edite o arquivo `index.html`.
-- As seções principais do site estão identificadas por blocos semânticos com `id`, como:
-  - `#inicio`
-  - `#empresa`
-  - `#solucoes`
-  - `#metodologia`
-  - `#diferenciais`
-  - `#contato`
+### Textos
+- Edite diretamente o arquivo `index.html`.
+- Cada seção possui `id` e títulos claros para facilitar manutenção.
 
-### Cores e estilo visual
-- Edite as variáveis CSS no topo do arquivo `style.css`, dentro do bloco `:root`.
-- Principais grupos de cores:
-  - `--forest-*` para verdes principais
-  - `--earth-*` para tons terrosos discretos
-  - `--gray-*` para fundos e bordas
+### Cores
+- Edite as variáveis no topo de `style.css` (bloco `:root`).
+- Principais variáveis:
+  - `--green-900`, `--green-700`, `--green-500`
+  - `--gray-100`, `--gray-300`, `--gray-600`
+  - `--earth-300`
 
-### Informações de contato
-- No arquivo `index.html`, atualize:
-  - e-mail institucional exibido na seção de contato
-  - número de WhatsApp
-  - cidade/UF
-  - link ou nome do LinkedIn
-  - `action` do formulário com o e-mail correto no `mailto:`
+### Contato
+- No `index.html`, altere:
+  - E-mail em texto (seção de contato)
+  - Número de WhatsApp
+  - `action` do formulário (`mailto:...`)
 
 ## 4) Como substituir o espaço do logotipo por uma imagem real
 
-O cabeçalho usa um espaço reservado com a classe `.logo-placeholder`.
+Atualmente o cabeçalho usa um placeholder com a classe `.logo-placeholder`.
 
-### Passos
-1. Adicione o arquivo da marca ao projeto, por exemplo: `assets/logo.png`.
-2. No `index.html`, substitua este trecho:
+### Passos:
+1. Adicione sua imagem ao projeto, por exemplo: `assets/logo.png`.
+2. No `index.html`, substitua:
 
 ```html
 <div class="logo-placeholder" aria-label="Espaço reservado para logotipo">LOGO</div>
@@ -80,19 +71,16 @@ por:
 <img class="logo-image" src="assets/logo.png" alt="Logotipo Cedrela Tecnologia Ambiental" />
 ```
 
-3. No `style.css`, adicione ou ajuste:
+3. No `style.css`, ajuste tamanho e encaixe:
 
 ```css
 .logo-image {
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   object-fit: contain;
 }
 ```
 
-## Observações técnicas
+## Observação sobre formulário
 
-- O site funciona diretamente ao abrir o arquivo `index.html`.
-- Não há dependência de backend.
-- O formulário está preparado para uso visual e envio via `mailto`, o que depende de cliente de e-mail local.
-- Se desejar um envio real sem cliente de e-mail, será necessário integrar um serviço externo compatível com site estático.
+Como o GitHub Pages não possui backend nativo, o formulário está preparado para envio via `mailto` (cliente de e-mail local) e para futura integração com serviço externo (ex.: endpoint serverless, form provider etc.).
