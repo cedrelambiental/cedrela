@@ -388,7 +388,7 @@
           </ul>
         </div>
 
-        <form class="contact-form" action="https://formspree.io/f/mrevzpny" method="post">
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/mrevzpny" method="post">
           <div class="form-heading">
             <h3>Envie sua demanda</h3>
             <p>Preencha os campos abaixo para encaminhar sua solicitação de atendimento.</p>
@@ -409,7 +409,9 @@
           <label for="mensagem">Mensagem</label>
           <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-          <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+          <p id="formFeedback" class="form-feedback" aria-live="polite"></p>
+
+          <button id="contactSubmit" type="submit" class="btn btn-primary">Enviar mensagem</button>
         </form>
       </div>
     </section>

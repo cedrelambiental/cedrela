@@ -772,6 +772,21 @@ p {
   margin-bottom: 6px;
 }
 
+.form-feedback {
+  min-height: 24px;
+  margin: 4px 0 0;
+  color: var(--text-700);
+  font-size: 0.95rem;
+}
+
+.form-feedback.is-success {
+  color: var(--forest-800);
+}
+
+.form-feedback.is-error {
+  color: #9b2c2c;
+}
+
 label {
   color: var(--forest-900);
   font-weight: 600;

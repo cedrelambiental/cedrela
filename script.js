@@ -6,6 +6,9 @@ const sections = document.querySelectorAll('main section[id]');
 const backToTop = document.getElementById('backToTop');
 const faqButtons = document.querySelectorAll('.faq-question');
 const revealItems = document.querySelectorAll('.reveal');
+const contactForm = document.getElementById('contactForm');
+const formFeedback = document.getElementById('formFeedback');
+const contactSubmit = document.getElementById('contactSubmit');
 
 const closeMenu = () => {
   if (!mainNav || !menuToggle) {
@@ -130,5 +133,53 @@ if ('IntersectionObserver' in window) {
 } else {
   revealItems.forEach((item) => {
     item.classList.add('is-visible');
+  });
+}
+
+const setFormFeedback = (message, type = '') => {
+  if (!formFeedback) {
+    return;
+  }
+
+  formFeedback.textContent = message;
+  formFeedback.classList.remove('is-success', 'is-error');
+
+  if (type) {
+    formFeedback.classList.add(type);
+  }
+};
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    try {
+      if (contactSubmit) {
+        contactSubmit.disabled = true;
+      }
+
+      setFormFeedback('Enviando mensagem...', '');
+
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Formspree request failed');
+      }
+
+      contactForm.reset();
+      setFormFeedback('Mensagem enviada com sucesso.', 'is-success');
+    } catch {
+      setFormFeedback('Não foi possível enviar a mensagem. Tente novamente em instantes.', 'is-error');
+    } finally {
+      if (contactSubmit) {
+        contactSubmit.disabled = false;
+      }
+    }
   });
 }
